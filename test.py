@@ -6,5 +6,10 @@ currency = 'USD'
 URL = f"https://v6.exchangerate-api.com/v6/{API}/latest/{currency}"
 
 response = requests.get(URL)
-print(response.status_code)
-print(response.json())
+jsondata = response.json()
+
+# print(response.status_code)
+# print(jsondata)
+
+print(jsondata['conversion_rates']['UZS'])
+
